@@ -55,4 +55,12 @@
         android:layout_alignParentBottom="true"
         android:layout_alignLeft="@+id/textViewEntrar"
         android:layout_alignStart="@+id/textViewEntrar" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="opcoes"
+        android:id="@+id/buttonOpcoes"
+        android:layout_above="@+id/buttonCadastrar"
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>
