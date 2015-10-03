@@ -63,9 +63,10 @@ public class CadastroActivity extends AppCompatActivity {
                         user.setTipo(tipo);
                         //Toast.makeText(getApplicationContext(),"Login: "+user.getLogin()+" Senha: "+user.getSenha()+"tipo: "+user.getTipo(), Toast.LENGTH_SHORT).show();
                         //Muda para tela opcoes
-                        Intent telaOpcoes = new Intent(v.getContext(),OpcoesActivity.class);
-                        telaOpcoes.putExtra("user", user);
-                        startActivity(telaOpcoes);
+                        Intent telaInicial = new Intent(v.getContext(),MainActivity.class);
+                        telaInicial.putExtra("user", user);
+                        startActivity(telaInicial);
+                        finish();
                     }catch (Exception e){
                         Toast.makeText(getApplicationContext(),e.toString(), Toast.LENGTH_LONG).show();
                     }

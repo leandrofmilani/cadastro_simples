@@ -8,6 +8,9 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
+
+import java.util.concurrent.ExecutionException;
 
 public class MainActivity extends AppCompatActivity {
     private EditText txt_login;
@@ -25,20 +28,6 @@ public class MainActivity extends AppCompatActivity {
         btn_login = (Button) findViewById(R.id.buttonEntrar);
         btn_cadastrar = (Button) findViewById(R.id.buttonCadastrar);
 
-        //Ao clicar limpa o txt
-        txt_login.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                txt_login.setText("");
-            }
-        });
-        txt_senha.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                txt_senha.setText("");
-            }
-        });
-
 
         btn_login.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -46,6 +35,27 @@ public class MainActivity extends AppCompatActivity {
                 String login, senha;
                 login = txt_login.getText().toString();
                 senha = txt_senha.getText().toString();
+
+                Usuario user = null;
+                Bundle dados = getIntent().getExtras();
+
+                if (dados != null){
+                    user = (Usuario) dados.getSerializable("user");
+
+                    if (login.equals(user.getLogin()) && senha.equals(user.getSenha())){
+                        try{
+                            //Joga pra outra activity
+                            Intent telaOpcoes = new Intent(v.getContext(), OpcoesActivity.class);
+                            startActivity(telaOpcoes);
+                        }catch (Exception e){
+                            Toast.makeText(getApplicationContext(),e.toString(), Toast.LENGTH_SHORT).show();
+                        }
+                    }else {
+                        Toast.makeText(getApplicationContext(),"Usuário ou senha inválidos!", Toast.LENGTH_SHORT).show();
+                    }
+                } else {
+                    Toast.makeText(getApplicationContext(),"Voce precisa se cadastrar!", Toast.LENGTH_SHORT).show();
+                }
 
 
             }
@@ -57,6 +67,8 @@ public class MainActivity extends AppCompatActivity {
                 //Joga pra outra activity
                 Intent telaCadastro = new Intent(v.getContext(), CadastroActivity.class);
                 startActivity(telaCadastro);
+                finish();
+
             }
         });
 

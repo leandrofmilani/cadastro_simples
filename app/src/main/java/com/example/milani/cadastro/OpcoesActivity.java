@@ -1,35 +1,53 @@
 package com.example.milani.cadastro;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 public class OpcoesActivity extends AppCompatActivity {
-    protected TextView TextViewLogin;
-    protected TextView TextViewSenha;
-    protected TextView TextViewTipo;
+
+    private Button btn_maisDados;
+    private Button btn_verDados;
+    private Button btn_sair;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_opcoes);
 
-        TextViewLogin = (TextView) findViewById(R.id.textViewVerUser);
-        TextViewSenha = (TextView) findViewById(R.id.textViewVerSenha);
-        TextViewTipo = (TextView) findViewById(R.id.textViewVerTipo);
 
-        Usuario user;
+        btn_maisDados = (Button) findViewById(R.id.buttonMaisDados);
+        btn_verDados = (Button) findViewById(R.id.buttonVerDados);
+        btn_sair = (Button) findViewById(R.id.buttonTelaOpSair);
 
-        Bundle dados = getIntent().getExtras();
 
-        if (dados != null){
-            user = (Usuario) dados.getSerializable("user");
-            TextViewLogin.setText(user.getLogin());
-            TextViewSenha.setText(user.getSenha());
-            TextViewTipo.setText(user.getTipo());
-        }
+
+        btn_maisDados.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Joga pra outra activity
+                Intent telaMaisDados = new Intent(v.getContext(), MaisDadosActivity.class);
+                startActivity(telaMaisDados);
+            }
+        });
+
+        btn_verDados.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Joga pra outra activity
+                Intent telaVerDados = new Intent(v.getContext(), VerDadosActivity.class);
+                startActivity(telaVerDados);
+            }
+        });
+
+
+
     }
 
     @Override

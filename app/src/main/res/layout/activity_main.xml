@@ -20,7 +20,6 @@
         android:id="@+id/editTextLogin"
         android:layout_below="@+id/textViewEntrar"
         android:layout_marginTop="67dp"
-        android:text="@string/login"
         android:layout_alignRight="@+id/editTextSenha"
         android:layout_alignEnd="@+id/editTextSenha"
         android:layout_alignLeft="@+id/editTextSenha"
