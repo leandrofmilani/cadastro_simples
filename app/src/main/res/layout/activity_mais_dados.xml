@@ -1,0 +1,141 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.example.milani.cadastro.MaisDadosActivity">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/txt_cadastroMaisDados"
+        android:id="@+id/textViewCadastroMaisDados"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_salvarMaisDados"
+        android:id="@+id/buttonCadSalvarMaisDados"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/textViewCadSexo"
+        android:layout_toEndOf="@+id/textViewCadSexo" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="@string/cad_nome"
+        android:ems="10"
+        android:id="@+id/editTextCadNome"
+        android:layout_below="@+id/textViewCadastroMaisDados"
+        android:layout_alignLeft="@+id/textViewCadastroMaisDados"
+        android:layout_alignStart="@+id/textViewCadastroMaisDados" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="@string/cad_sobrenome"
+        android:ems="10"
+        android:id="@+id/editTextCadSobrenome"
+        android:layout_below="@+id/editTextCadNome"
+        android:layout_alignLeft="@+id/editTextCadNome"
+        android:layout_alignStart="@+id/editTextCadNome" />
+
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cad_masculino"
+        android:id="@+id/radioButtonCadMasculino"
+        android:layout_below="@+id/editTextCadSobrenome"
+        android:checked="false"
+        android:layout_alignLeft="@+id/buttonCadSalvarMaisDados"
+        android:layout_alignStart="@+id/buttonCadSalvarMaisDados"
+        android:layout_alignRight="@+id/buttonCadSalvarMaisDados"
+        android:layout_alignEnd="@+id/buttonCadSalvarMaisDados" />
+
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cad_feminino"
+        android:id="@+id/radioButtonCadFeminino"
+        android:layout_alignBottom="@+id/radioButtonCadMasculino"
+        android:layout_toEndOf="@+id/radioButtonCadMasculino"
+        android:checked="false" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/cad_sexo"
+        android:id="@+id/textViewCadSexo"
+        android:layout_alignBottom="@+id/radioButtonCadMasculino"
+        android:layout_alignLeft="@+id/editTextCadSobrenome"
+        android:layout_alignStart="@+id/editTextCadSobrenome" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="@string/cad_idade"
+        android:ems="10"
+        android:id="@+id/editTextCadIdade"
+        android:layout_below="@+id/radioButtonCadMasculino"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/cad_gostos"
+        android:id="@+id/textViewCadGostos"
+        android:layout_below="@+id/editTextCadIdade"
+        android:layout_alignLeft="@+id/textViewCadSexo"
+        android:layout_alignStart="@+id/textViewCadSexo" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cad_musicas"
+        android:id="@+id/checkBoxCadMusicas"
+        android:layout_below="@+id/textViewCadGostos"
+        android:layout_alignLeft="@+id/radioButtonCadMasculino"
+        android:layout_alignStart="@+id/radioButtonCadMasculino"
+        android:checked="false" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cad_jogos"
+        android:id="@+id/checkBoxCadJogos"
+        android:layout_below="@+id/checkBoxCadMusicas"
+        android:layout_toRightOf="@+id/textViewCadSexo"
+        android:layout_toEndOf="@+id/textViewCadSexo"
+        android:checked="false" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cad_tv"
+        android:id="@+id/checkBoxCadTv"
+        android:checked="false"
+        android:layout_below="@+id/checkBoxCadJogos"
+        android:layout_alignLeft="@+id/checkBoxCadJogos"
+        android:layout_alignStart="@+id/checkBoxCadJogos" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cad_esportes"
+        android:id="@+id/checkBoxCadEsportes"
+        android:checked="false"
+        android:layout_below="@+id/checkBoxCadTv"
+        android:layout_alignLeft="@+id/checkBoxCadTv"
+        android:layout_alignStart="@+id/checkBoxCadTv" />
+
+</RelativeLayout>
