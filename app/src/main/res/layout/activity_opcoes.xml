@@ -6,30 +6,31 @@
     android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context="com.example.milani.cadastro.OpcoesActivity">
 
-    <Button
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/maisDados"
-        android:id="@+id/buttonMaisDados"
+        android:text="New Text"
+        android:id="@+id/textViewVerUser"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="41dp" />
+        android:layout_marginTop="44dp" />
 
-    <Button
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/verDados"
-        android:id="@+id/buttonVerDados"
-        android:layout_below="@+id/buttonMaisDados"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="43dp" />
+        android:text="New Text"
+        android:id="@+id/textViewVerSenha"
+        android:layout_below="@+id/textViewVerUser"
+        android:layout_alignLeft="@+id/textViewVerUser"
+        android:layout_alignStart="@+id/textViewVerUser"
+        android:layout_marginTop="40dp" />
 
-    <Button
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/telaOpSair"
-        android:id="@+id/buttonTelaOpSair"
-        android:layout_alignParentBottom="true"
+        android:text="New Text"
+        android:id="@+id/textViewVerTipo"
+        android:layout_below="@+id/textViewVerSenha"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="72dp" />
+        android:layout_marginTop="27dp" />
 </RelativeLayout>

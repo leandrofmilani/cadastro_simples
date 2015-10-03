@@ -24,14 +24,6 @@
             android:name=".OpcoesActivity"
             android:label="@string/title_activity_opcoes" >
         </activity>
-        <activity
-            android:name=".MaisDadosActivity"
-            android:label="@string/title_activity_mais_dados" >
-        </activity>
-        <activity
-            android:name=".VerDadosActivity"
-            android:label="@string/title_activity_ver_dados" >
-        </activity>
     </application>
 
 </manifest>

@@ -12,32 +12,6 @@
     <string name="radio_admin">Admin</string>
     <string name="title_activity_cadastro">CadastroActivity</string>
 
-
-
-    <string name="maisDados">+ Dados</string>
-    <string name="verDados">Ver Dados</string>
-    <string name="telaOpSair">Sair</string>
-    <string name="txt_cadastroMaisDados">Cadastre Seus Dados:</string>
-    <string name="btn_salvarMaisDados">Salvar</string>
-    <string name="cad_nome">Nome</string>
-    <string name="cad_sobrenome">Sobrenome</string>
-    <string name="cad_sexo">Sexo:</string>
-    <string name="cad_masculino">M</string>
-    <string name="cad_feminino">F</string>
-    <string name="cad_idade">Idade</string>
-    <string name="cad_gostos">Gostos:</string>
-    <string name="cad_jogos">Jogos</string>
-    <string name="cad_esportes">Esportes</string>
-    <string name="cad_tv">TV</string>
-    <string name="cad_musicas">Músicas</string>
-
-
-
-
-
-
     <string name="hello_world">Hello world!</string>
     <string name="title_activity_opcoes">OpcoesActivity</string>
-    <string name="title_activity_mais_dados">MaisDadosActivity</string>
-    <string name="title_activity_ver_dados">VerDadosActivity</string>
 </resources>
