@@ -1,0 +1,68 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.example.milani.cadastro.CadastroActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/txt_cadastro"
+        android:id="@+id/textViewCadastro"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editTextCadLogin"
+        android:layout_marginTop="39dp"
+        android:layout_below="@+id/textViewCadastro"
+        android:layout_alignLeft="@+id/editTextCadSenha"
+        android:layout_alignStart="@+id/editTextCadSenha"
+        android:layout_alignRight="@+id/editTextCadSenha"
+        android:layout_alignEnd="@+id/editTextCadSenha"
+        android:hint="@string/login" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:id="@+id/editTextCadSenha"
+        android:layout_below="@+id/editTextCadLogin"
+        android:layout_centerHorizontal="true"
+        android:hint="@string/senha" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_cadastrar"
+        android:id="@+id/buttonCadCadastrar"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/radio_usuario"
+        android:id="@+id/radioButtonUsuario"
+        android:checked="true"
+        android:layout_below="@+id/editTextCadSenha"
+        android:layout_alignLeft="@+id/editTextCadSenha"
+        android:layout_alignStart="@+id/editTextCadSenha" />
+
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/radio_admin"
+        android:id="@+id/radioButtonAdmin"
+        android:checked="false"
+        android:layout_below="@+id/editTextCadSenha"
+        android:layout_alignRight="@+id/editTextCadSenha"
+        android:layout_alignEnd="@+id/editTextCadSenha" />
+
+</RelativeLayout>
